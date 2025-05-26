@@ -5,7 +5,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Badge } from "@/components/ui/badge";
 import { ArrowDown, MessageSquare, Phone, LinkedinIcon } from "lucide-react";
 
@@ -36,10 +35,9 @@ const Index = () => {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    // Here you would typically send to backend
     alert('Спасибо за заявку! Свяжусь с вами в течение часа.');
   };
 
@@ -154,7 +152,7 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-cyan-50 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23e0f2f1" fill-opacity="0.3"%3E%3Ccircle cx="20" cy="20" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;utf8,<svg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" fill-rule=\"evenodd\"><g fill=\"%23e0f2f1\" fill-opacity=\"0.3\"><circle cx=\"20\" cy=\"20\" r=\"2\"/></g></g></svg>')] opacity-50"></div>
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
@@ -169,7 +167,7 @@ const Index = () => {
               <Button 
                 size="lg" 
                 className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 text-lg font-semibold rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-                onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Получить бесплатный аудит
               </Button>
