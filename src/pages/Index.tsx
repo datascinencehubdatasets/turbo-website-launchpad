@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -57,19 +56,19 @@ const Index = () => {
     {
       title: "Корпоративный сайт",
       description: "Многостраничный сайт для компании",
-      price: "от 100 000 ₸",
+      price: "от 50 000 ₸",
       icon: <Briefcase className="w-8 h-8" />
     },
     {
       title: "Сайт-каталог",
       description: "Каталог товаров с фильтрацией",
-      price: "от 100 000 ₸",
+      price: "от 50 000 ₸",
       icon: <CheckCircle className="w-8 h-8" />
     },
     {
       title: "Интернет-магазин",
       description: "Полноценный e-commerce с корзиной",
-      price: "от 100 000 ₸",
+      price: "от 50 000 ₸",
       icon: <DollarSign className="w-8 h-8" />
     },
     {
@@ -155,7 +154,7 @@ const Index = () => {
         <div 
           className="absolute inset-0 opacity-20"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='20' cy='20' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+            backgroundImage: `url('data:image/svg+xml;charset=UTF-8,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="20" cy="20" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')`
           }}
         />
         
@@ -164,10 +163,10 @@ const Index = () => {
             <div className="animate-fade-in">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                 Создаю сайты и ИИ-решения
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">за 48-72 часа</span>
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">за 2-3 дня</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Профессиональная веб-разработка для запуска онлайн-продаж от 10 000 ₸
+                Создаем лендинг пейджи и веб-сайты с возможностью интеграции ИИ от 10 000 ₸
               </p>
               <Button 
                 size="lg" 
@@ -188,7 +187,7 @@ const Index = () => {
                 <div className="text-gray-300">успешных проектов</div>
               </div>
               <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">48-72ч</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">2-3 дня</div>
                 <div className="text-gray-300">средний срок работы</div>
               </div>
             </div>
@@ -207,12 +206,12 @@ const Index = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="w-40 h-40 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-600 mx-auto lg:mx-0 mb-8 flex items-center justify-center text-5xl text-white font-bold shadow-xl">
-                  ДМ
+                  АИ
                 </div>
               </div>
               <div>
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                  Дмитрий Максимов
+                  Алихан Ибраев
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed mb-8">
                   Full-stack разработчик с опытом создания высокоэффективных веб-решений. 
@@ -565,7 +564,7 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="text-center">
             <div className="mb-6">
-              <h3 className="text-2xl font-bold mb-2">Дмитрий Максимов</h3>
+              <h3 className="text-2xl font-bold mb-2">Алихан Ибраев</h3>
               <p className="text-gray-400">Full-stack разработчик, Алматы</p>
             </div>
             
@@ -583,7 +582,7 @@ const Index = () => {
             
             <div className="border-t border-gray-800 pt-6">
               <p className="text-gray-400 text-sm mb-2">
-                © 2024 Дмитрий Максимов — профессиональная веб-разработка
+                © 2024 Алихан Ибраев — профессиональная веб-разработка
               </p>
               <a href="#" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
                 Политика конфиденциальности
