@@ -8,6 +8,8 @@ type ToasterToast = {
   action?: React.ReactNode
   duration?: number
   variant?: "default" | "destructive"
+  open?: boolean
+  onOpenChange?: (open: boolean) => void
 }
 
 const TOAST_LIMIT = 1
@@ -20,13 +22,6 @@ let count = 0
 function genId() {
   count = (count + 1) % Number.MAX_VALUE
   return count.toString()
-}
-
-type Toast = ToasterToast & {
-  id: string
-  title?: React.ReactNode
-  description?: React.ReactNode
-  action?: ToastActionElement
 }
 
 const actionTypes = {
@@ -183,7 +178,7 @@ export function useToast() {
 
   return {
     ...state,
-    toast: (props: ToasterToast) => {
+    toast: (props: Omit<ToasterToast, "id">) => {
       const id = genId()
 
       const update = (props: ToasterToast) =>
@@ -214,10 +209,7 @@ export function useToast() {
   }
 }
 
-type Toast = Omit<ToasterToast, "id">
-
-export function toast(props: Toast) {
-  const TOAST_LIMIT = 1
+export function toast(props: Omit<ToasterToast, "id">) {
   const id = genId()
 
   const update = (props: ToasterToast) =>
